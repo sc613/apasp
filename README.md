@@ -1,4 +1,10 @@
-# apasp
+# All Pairs Almost Shortest Path 
+
+Implementation of `D. Dor, S. Halperin and U. Zwick, “All pairs almost shortest paths,” Proceedings of 37th Conference on Foundations of Computer Science, 1996, pp. 452-461, doi: 10.1109/SFCS.1996.548504.`.
+
+Team project for SNU Theory of Computation, 2021 Fall. 
+
+Implementation : Jongjin Kim(j2kim99), Suchan Kim(sc613), Wonseok Shin(gratus907).
 
 ### Graph Generator
 Generates random connected graph, by 
