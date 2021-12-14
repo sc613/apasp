@@ -8,9 +8,11 @@ int main(){
     int **d = new int*[V];
     for (int i = 0; i < V; i++)
         d[i] = new int[V];
-    for (int i = 0; i < V; i++)
-    for (int j = 0; j < V; j++)
-        d[i][j] = -1;
+    for (int i = 0; i < V; i++){
+        for (int j = 0; j < V; j++)
+            d[i][j] = -1;
+        d[i][i] = 0;
+    }
     int v1, v2;
     for(int i = 0; i < E; i++){
         cin >> v1 >> v2;
