@@ -60,7 +60,7 @@ void print_graph(vector<vector<int>> graph) {
 
 int main(int argc, char* argv[]) {
     int V, E; 
-    if (argc == 2) {
+    if (argc >= 2) {
         V = atoi(argv[1]);
         E = atoi(argv[2]);
         E = max(E, V - 1);

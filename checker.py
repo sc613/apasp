@@ -7,15 +7,16 @@ def chk(apsp_path, apasp_path):
     apsp = f1.readlines()
     apasp = f2.readlines()
 
-    for l1, l2 in zip(apsp, apasp):
+    for r, (l1, l2) in enumerate(zip(apsp, apasp)):
         t1 = l1.split()
         t2 = l2.split()
 
-        for s1, s2 in zip(t1, t2):
+        for c, (s1, s2) in enumerate(zip(t1, t2)):
             d1 = int(s1)
             d2 = int(s2)
 
             if d1 > d2 or d1+2 < d2:
+                print("Error at row:{}, col:{}".format(r, c))
                 return False
     
     return True

@@ -341,11 +341,6 @@ Matrix<int> apasp_b(AdjList &G)
 
 int main(int argc, char *argv[])
 {
-    if (argc != 2)
-    {
-        return 0;
-    }
-
     int node_count, edge_count;
     cin >> node_count >> edge_count;
 
@@ -360,17 +355,8 @@ int main(int argc, char *argv[])
 
     Matrix<int> d;
 
-    switch (argv[1][0])
-    {
-    case '2':
-        d = apasp_a(G);
-        break;
-    case '3':
-        d = apasp_b(G);
-        break;
-    default:
-        return 0;
-    }
+    bool sparse = (pow(node_count, 1.5)*pow(edge_count, 0.5) < pow(node_count, 2.333));
+    d = sparse ? apasp_a(G) : apasp_b(G);
 
     d.print();
 }
